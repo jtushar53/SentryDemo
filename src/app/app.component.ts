@@ -4,6 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
+import * as Sentry from 'sentry-cordova';
 @Component({
   templateUrl: 'app.html'
 })
@@ -16,6 +17,8 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
+      Sentry.init({ dsn: 'https://ef5d05934d04411da3b7f3a516d6926b@sentry.io/1399735' });
+
     });
   }
 }
