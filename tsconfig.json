@@ -4,6 +4,8 @@
     "declaration": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "sourceRoot": "/",
+    "inlineSources": true,
     "lib": [
       "dom",
       "es2015"

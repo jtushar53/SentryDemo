@@ -6,9 +6,14 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
-
-  constructor(public navCtrl: NavController) {
-
+  loginForm: any = {};
+  constructor(public navCtrl: NavController) {}
+  forgotPass() {}
+  login() {
+    this.validateEmail(this.loginForm['email']);
   }
 
+  validateEmail(e) {
+    console.log(e.toString());
+  }
 }

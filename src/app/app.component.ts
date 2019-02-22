@@ -17,8 +17,12 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
-      Sentry.init({ dsn: 'https://ef5d05934d04411da3b7f3a516d6926b@sentry.io/1399735' });
-
+      Sentry.init({ dsn: 'https://ef5d05934d04411da3b7f3a516d6926b@sentry.io/1399735', release: "SentryDemo@1.0.3" });
+      Sentry.configureScope(scope => {
+        scope.setUser({
+          email: 'jtushar53@gmail.com'
+        });
+      });
     });
   }
 }
